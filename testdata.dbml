@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="main" Class="Main" BaseType="DbLinq.Data.Linq.DataContext" Provider="Sqlite" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="main.films" Member="Films">
+    <Type Name="Films">
+      <Column Name="id" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rank" Member="Rank" Storage="_rank" Type="System.Int32" DbType="int(11)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="rating" Member="Rating" Storage="_rating" Type="System.String" DbType="varchar(20)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="title" Member="Title" Storage="_title" Type="System.String" DbType="varchar(255)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="votes" Member="Votes" Storage="_votes" Type="System.Int32" DbType="integer" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="year" Member="Year" Storage="_year" Type="System.String" DbType="varchar(4)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.films_tree" Member="FilmsTree">
+    <Type Name="FilmsTree">
+      <Column Name="id" Member="ID" Storage="_id" Type="System.Int32" DbType="integer" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="open" Member="Open" Storage="_open" Type="System.Int32" DbType="int(1)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="parent" Member="Parent" Storage="_parent" Type="System.Int32" DbType="int(11)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="title" Member="Title" Storage="_title" Type="System.String" DbType="varchar(255)" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.packages_plain" Member="PackagesPlain">
+    <Type Name="PackagesPlain">
+      <Column Name="architecture" Member="Architecture" Storage="_architecture" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="id" Member="ID" Storage="_id" Type="System.Int32" DbType="INTEGER" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="maintainer" Member="Maintainer" Storage="_maintainer" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="package" Member="Package" Storage="_package" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="priority" Member="Priority" Storage="_priority" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="section" Member="Section" Storage="_section" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="size" Member="Size" Storage="_size" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="version" Member="Version" Storage="_version" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.packages_tree" Member="PackagesTree">
+    <Type Name="PackagesTree">
+      <Column Name="has_kids" Member="HasKids" Storage="_hasKids" Type="System.Int32" DbType="INTEGER" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="hours" Member="Hours" Storage="_hours" Type="System.Int32" DbType="INTEGER" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="id" Member="ID" Storage="_id" Type="System.Int32" DbType="INTEGER" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parent_id" Member="ParentID" Storage="_parentID" Type="System.Int32" DbType="INTEGER" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="state" Member="State" Storage="_state" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="value" Member="Value" Storage="_value" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.sqlite_sequence" Member="SQLiteSequence">
+    <Type Name="SQLiteSequence">
+      <Column Name="name" Member="Name" Storage="_name" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="seq" Member="SEQ" Storage="_seq" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="main.sqlite_stat1" Member="SQLiteStat1">
+    <Type Name="SQLiteStat1">
+      <Column Name="idx" Member="IDX" Storage="_idx" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="stat" Member="Stat" Storage="_stat" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+      <Column Name="tbl" Member="TBl" Storage="_tbL" Type="DbLinq.Vendor.Implementation.SchemaLoader+UnknownType" DbType="" IsPrimaryKey="false" IsDbGenerated="false" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

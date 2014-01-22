@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "DataTable";
+}
+<link href="~/Content/webix.min.css" rel="stylesheet" />
+<script src="~/Scripts/webix.min.js"></script>
+<script>
+    webix.ready(function () {
+        webix.ui({
+            rows:[{
+                view: "datatable", id: "grid",
+                select: "row", editable: true, scroll: false, editaction: "dblclick",
+                columns: [
+                    { id: "Rating", header: "#", width: 50, editor: "text" },
+                    { id: "Title", fillspace: true, header: "Film name", editor: "text" },
+                    { id: "Votes", header: "Votes", editor: "text" },
+                    { id: "Year", header: "Year", editor: "text" }
+                ],
+                url: "/api/data",
+                save: "rest->api/data"
+            },{
+                cols:[
+                    { view: "button", value: "Add Row", click: function () {
+                        var id = $$("grid").add({ Title: "New film", Rating:0, Votes:0, Year:2013, id:-1 });
+                        $$("grid").editCell(id, "Title");
+                    }},
+                    { view: "button", value: "Delete selected", click: function () {
+                        $$("grid").remove($$("grid").getSelectedId());
+                    }}
+                ]
+            }]
+        });
+
+        webix.message("DblClick row to edit")
+    });
+</script>
