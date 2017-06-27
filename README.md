@@ -1,33 +1,24 @@
-webix-netmvc-demo
-=================
+# Webix demo for .Net MVC
 
-Basic DB operations with Webix and MVC .Net
+This package shows how Webix can be used with .Net MVC backend.
+
+There are 3 major cases:
+
+- Loading data into data components (list, datatable, chart, etc. )
+- Loading data in hierarchical components (tree, treetable, etc.)
+- Working with forms
+
+For data loading the server must provide a GET handler which returns a collection of JSON objects (a single JSON object in case of the form )
+
+For data saving, a common REST pattern is used. Rest handlers must return a valid JSON object with optional ID value.
+
+### Check also
 
 
+- [PHP (Lumen | Laravel) samples](//github.com/webix-hub/webix-php-lumen-demo)
+- [NodeJS (Express) samples](//github.com/webix-hub/webix-nodejs-demo)
 
-License
-----------
 
-Webix is published under the GPLv3 license.
+## License
 
-All other code is released under the MIT License:
-
-Copyright (c) 2015
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+[MIT license](http://opensource.org/licenses/MIT)
